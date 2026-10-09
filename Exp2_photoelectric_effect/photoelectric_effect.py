@@ -50,6 +50,17 @@ spectrum9 = data9['spectral data']
 wavelenght10 = data10['wavelength']
 spectrum10 = data10['spectral data']
 
+wavelenghts = [wavelenght1, wavelenght2, wavelenght3, wavelenght4, wavelenght5, wavelenght6, wavelenght7, wavelenght8, wavelenght9, wavelenght10]
+
+spectra = [spectrum1, spectrum2, spectrum3, spectrum4, spectrum5, spectrum6, spectrum7, spectrum8, spectrum9, spectrum10]
+
+peak_wavelengths = []
+for i in range(len(spectra)):
+    peak_wavelength = wavelenghts[i][spectra[i].idxmax()]
+    peak_wavelengths.append(peak_wavelength)
+    print(f"Peak wavelength for spectrum {i+1}: {peak_wavelength}")
+
+peak_wavelengths = np.array(sorted(peak_wavelengths))*1e-9
 
 plt.figure(figsize=(12, 8))
 

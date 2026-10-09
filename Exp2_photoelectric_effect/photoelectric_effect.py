@@ -58,9 +58,9 @@ peak_wavelengths = []
 for i in range(len(spectra)):
     peak_wavelength = wavelenghts[i][spectra[i].idxmax()]
     peak_wavelengths.append(peak_wavelength)
-    print(f"Peak wavelength for spectrum {i+1}: {peak_wavelength}")
 
 peak_wavelengths = np.array(sorted(peak_wavelengths))*1e-9
+print(peak_wavelengths)
 
 plt.figure(figsize=(12, 8))
 
